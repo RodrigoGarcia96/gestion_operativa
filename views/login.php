@@ -88,8 +88,8 @@
 
     <?php
 session_start();
-include("connection.php");
-include("controller.php");
+include("../config/connection.php");
+include("../controllers/controller.php");
 ?>
 
     <form method="post" action="">
