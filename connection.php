@@ -7,5 +7,5 @@
 }
 
     $connection->set_charset("utf8mb4");
-    echo "Conexión exitosa";
+    // echo "Conexión exitosa";
 ?>
