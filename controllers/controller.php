@@ -9,7 +9,7 @@ if (!empty($_POST["btn_entrar"])){
 
         $sql = $connection->query("select * from empleado where id_kronos='$kronos' and contra='$contra'");
         if ($datos=$sql->fetch_object()) {
-            header("location:main.html");
+            header("location:dashboard.html");
         } else {
             echo "Error";
         }
