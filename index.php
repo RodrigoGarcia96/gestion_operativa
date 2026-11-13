@@ -1,7 +1,7 @@
 <?php
 session_start();
-include("../config/connection.php");
-include("../controllers/controller.php");
+include("config/connection.php");
+include("controllers/controller.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
