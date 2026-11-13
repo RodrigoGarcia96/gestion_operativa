@@ -1,0 +1,162 @@
+/* ===== Variables ===== */
+:root {
+  --azul: #2563eb;
+  --azul-oscuro: #1d4ed8;
+  --fondo: #f3f4f6;
+  --superficie: #ffffff;
+  --borde: #e5e7eb;
+  --texto: #111827;
+  --texto-suave: #6b7280;
+  --barra: #0f172a;
+  --lateral: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+/* ===== Barra superior ===== */
+.topbar {
+  height: 56px;
+  background: var(--barra);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.topbar-marca {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.topbar-usuario {
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+/* ===== Contenedor principal ===== */
+.app {
+  display: flex;
+  min-height: calc(100vh - 56px);
+}
+
+/* ===== Menú lateral ===== */
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--lateral);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h3 {
+  margin: 0 0 16px;
+  padding: 0 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #6b7280;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li a {
+  display: block;
+  padding: 10px 12px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #d1d5db;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar li a:hover {
+  background: #1f2937;
+  color: #ffffff;
+}
+
+.sidebar li a.activo {
+  background: var(--azul);
+  color: #ffffff;
+}
+
+.cerrar-sesion {
+  margin-top: auto;
+  padding: 10px 12px;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+  color: #d1d5db;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.cerrar-sesion:hover {
+  background: #7f1d1d;
+  border-color: #7f1d1d;
+  color: #ffffff;
+}
+
+/* ===== Área de contenido ===== */
+.contenido {
+  flex: 1;
+  min-width: 0;
+  padding: 32px;
+}
+
+.encabezado h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+  color: var(--texto);
+}
+
+.encabezado p {
+  margin: 0 0 24px;
+  font-size: 14px;
+  color: var(--texto-suave);
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 800px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .cerrar-sesion {
+    margin-top: 16px;
+  }
+
+  .contenido {
+    padding: 20px;
+  }
+
+  .topbar {
+    padding: 0 16px;
+  }
+
+  .topbar-usuario {
+    display: none;
+  }
+}
