@@ -5,9 +5,7 @@ include("../../config/connection.php");
 
 date_default_timezone_set("America/Mexico_City");
 
-// ===== Reglas de puntualidad (ajústalas a tu turno) =====
-$HORA_TURNO     = "08:00:00";  // hora oficial de entrada
-$TOLERANCIA_MIN = 0;           // minutos de tolerancia antes de contar retardo
+include("../../config/reglas.php");
 
 $hoy = date("Y-m-d");
 
