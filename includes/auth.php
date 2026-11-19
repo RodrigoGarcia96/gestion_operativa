@@ -6,7 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
 // Exige que haya iniciado sesión
 function requireLogin() {
     if (!isset($_SESSION["id_kronos"])) {
-        header("Location: ../index.php");
+        header("Location: ../../index.php");
         exit;
     }
 }
