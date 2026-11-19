@@ -1,6 +1,8 @@
 // Validación básica del lado del cliente (el servidor valida de nuevo en controller.php)
 const form = document.getElementById("form-login");
 const mensajeError = document.getElementById("mensaje-error");
+const campoClave = document.getElementById("contra");
+const botonClave = document.getElementById("toggle-clave");
 
 function mostrarError(texto) {
   mensajeError.textContent = texto;
@@ -18,4 +20,14 @@ form.addEventListener("submit", function (e) {
   }
 
   mensajeError.hidden = true;
+});
+
+// Mostrar u ocultar la contraseña
+botonClave.addEventListener("click", function () {
+  const estabaOculta = campoClave.type === "password";
+
+  campoClave.type = estabaOculta ? "text" : "password";
+  botonClave.textContent = estabaOculta ? "Ocultar" : "Mostrar";
+  botonClave.setAttribute("aria-label", estabaOculta ? "Ocultar contraseña" : "Mostrar contraseña");
+  campoClave.focus();
 });
