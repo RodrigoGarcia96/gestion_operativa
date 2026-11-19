@@ -50,7 +50,7 @@ include("controllers/controller.php");
           <div class="form-group">
             <label for="kronos">Número de Kronos</label>
             <input type="text" id="kronos" name="kronos" inputmode="numeric"
-                   placeholder="Ej. 1001" autofocus>
+                   placeholder="Ej. 548497" autofocus>
           </div>
 
           <div class="form-group">
